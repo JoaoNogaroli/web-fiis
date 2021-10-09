@@ -10,15 +10,15 @@ def load_data():
 
 
 
-header = st.container()
-dataset = st.container()
-medidas = st.container()
-painel1 = st.container()
-painel2 = st.container()
-painel3 = st.container()
-painel4 = st.container()
-painel5 = st.container()
-resultado = st.container()
+header = st.beta_container()
+dataset = st.beta_container()
+medidas = st.beta_container()
+painel1 = st.beta_container()
+painel2 = st.beta_container()
+painel3 = st.beta_container()
+painel4 = st.beta_container()
+painel5 = st.beta_container()
+resultado = st.beta_container()
 with header:
     st.title('Bem Vindo ao Análise dos fundos imobiliários')
     st.text('Projeto em Construção...')
