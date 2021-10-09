@@ -51,7 +51,7 @@ with painel1:
 with painel2:
     painel2.header('Filtre por Vários Códigos!')
     # , default=['ABCP11'] 
-    cods_escolhidos = painel2.multiselect("Columns", df['cod'].unique().tolist(), default=['ABCP11'])
+    cods_escolhidos = painel2.multiselect("beta_Columns", df['cod'].unique().tolist(), default=['ABCP11'])
     #print(cods_escolhidos)
     painel2.dataframe(df.loc[df['cod'].isin(cods_escolhidos)])
     #painel2.dataframe(df.loc[df['cod']==cod_escolhido])
@@ -60,7 +60,7 @@ with painel3:
     painel3.header('Múltiplos Filtros de coluna Dividendo(%) e Cota(R$)')
     painel3.text("Filtros")
 
-    esq,direita = painel3.columns(2)
+    esq,direita = painel3.beta_columns(2)
     dividendo = esq.slider('Valor do Dividendo ATÉ %', min_value =0.0, max_value = df['dy_valor_em_perc'].max()-25, step =0.05)
     cota = direita.slider('Valor da Cota ATÉ R$', min_value =0.0, max_value = df['cota'].median()+90, step =0.20)
     painel3.text("Códigos Filtrados")
